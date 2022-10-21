@@ -18,3 +18,4 @@ The rules of spicyuno are documented in [Base Spicy Uno Rules](...). These rules
 
 Well... currently there is not a way, it is totally possible and that is the goal of the [spicyuno.fun](http://www.spicyuno.fun) project.  Please stay tuned for more information.
 
+https://www.unorules.com/uno-versions/
