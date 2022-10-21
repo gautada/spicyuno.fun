@@ -1,6 +1,6 @@
 # Official Base Rules for __spicyuno__
 
-1. Follow the official UNO Rules with the following rules over-rulling any conflicts in the official UNO rules.
+1. Follow the official UNO Rules with the following rules over-riding any conflicts with the official UNO rules.
 2. Playing a "0" card of any color allows the player of the card to switch hands with any other player.
 3. A "2" may be placed on top of a "Draw 2" or a "2" with a draw requirement of the same color. This action multiplies any existing draw requirement by two (2) and passes the draw requirement to the next player.
 4. A "4" of the declared color may be played on top of a "Draw 4". This action multiplies the draw requirement by four (4) and is passed to the next player. 
