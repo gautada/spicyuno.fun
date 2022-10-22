@@ -18,32 +18,28 @@ integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpX
  </head>
 
  <body class="d-flex flex-column h-100">
-    <!-- NIVIGATION BAR -->
-    <nav id="navigation-bar>Unable to render navigation</nav>
+    <!-- Navigation Bar -->
+    <nav>
+     <div id="Navigation.md" class="dynamic-content">Unable to render navigation</div>
+    </nav>
 
-    <!-- Page Content -->
-    <main class="container mt-3">
-     <div id="README.md" class="bg-light p-5 rounded text-center dynamic-content">Unable to render content</div>
-    </main> <!-- End Main Container -->
+    <!-- Main -->
+    <main>
+     <div id="README.md" class="dynamic-content">Unable to render main content</div>
+    </main>
 
-    <!-- Full Width Sections -->
-    
-    <!-- The About Link Jumps To This Section -->
-    <section id="rules" class="bg-light py-5">
-     <div id="Rules.md" class="container dynamic-content"><h3>This content was not loaded</h3></div>
+    <!-- Sections -->
+    <section id="rules">
+     <div id="Rules.md" class="dynamic-content">Unable to render section content</div>
+    </section>
+
+    <section id="contact">
+     <div id="Contact.md" class="dynamic-content">Unable to render section content</div>
     </section>
 		
-    <!-- The Contact Link Jumps To This Section -->
-    <section id="contact" class="py-5">
-     <div id="Contact.md" class="container dynamic-content"><h3>This content was not loaded</h3></div>
-    </section>
-			
-    <!-- End Sections -->		
-
-   <footer class="footer mt-auto py-3 bg-dark">
-    <div class="container text-center">
-     <span class="text-muted">This Footer Sticks</span>
-    </div>
+    <!-- Footer -->
+    <footer>
+    <div id="Footer.md" class="dynamic-content">Unable to render footer content</div>
    </footer>
 
 
@@ -55,8 +51,6 @@ integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpX
    <!-- Micromark https://github.com/micromark/micromark -->
    <!-- 
    <script type="module">
-    import {micromark} from 'https://esm.sh/micromark@3?bundle'
-    console.log(micromark('./Rules.md'))
     // var f = new FileReader();
     // 	`console.log(micromark(f.readAsText("Rules.md")))    
    </script> 
@@ -65,13 +59,14 @@ integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpX
    <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
    <script type="module">
 var md = new Remarkable();
+// import {micromark} from 'https://esm.sh/micromark@3?bundle'
 
 function renderContent(uri) {
   var elements = document.getElementsByClassName('dynamic-content');
   for(var i = 0; i < elements.length; i++) {
      var eid = elements[i].id
      loadContent(eid, uri + eid);
-     // console.log(elements[i].id);
+     console.log(elements[i].id);
   }
 }
 
@@ -87,6 +82,7 @@ function loadContent(eid, uri) {
             var content =  request.responseText;
             var element = document.getElementById(eid);
             var rendered = md.render(content);
+    	    // var rendered = micromark(content);
             element.innerHTML = rendered;
 	    // For debugging
             // console.log(element.innerHTML);
