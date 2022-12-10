@@ -12,7 +12,7 @@ This is **NOT** [Mattel's](https://www.mattel.com) card game [*UNO*](https://www
 
 ## Rules
 
-The rules of spicyuno are documented in [Base Spicy Uno Rules](...). These rules should be thought of as the atrting point for your own spicyuno. The [base rules](...) may change over time and should be considered as the bottom line.  In the event of a rule conflict or dispute then the latest [base rules](...) should take prescedent over customized rules.
+The rules of spicyuno are documented in [Base Spicy Uno Rules](...). These rules should be thought of as the starting point for your own spicyuno. The [base rules](...) may change over time and should be considered as the bottom line.  In the event of a rule conflict or dispute then the latest [base rules](...) should take prescedent over customized rules.
 
 ### How do I propose a new rule?
 
