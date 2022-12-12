@@ -40,4 +40,4 @@ function loadContent(eid, uri) {
    
 }
 
-renderContent('https://raw.githubusercontent.com/gautada/spicyuno.fun/main/');
+renderContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");
