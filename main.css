@@ -1,13 +1,20 @@
+/*
+ COLORS:
+ Red: 231 51 35 = #E73323
+ Lt Red: 244 188 189 = #F4BCBD
+ Dk Red: 197 41 28 = #C5291C
+ */
+
 *, *:before, *:after
 { box-sizing: border-box; }
 
 html { font-size: 18px; }
 
 body {
-  color: #e0e4cc;
+  color: #fff; // #e0e4cc;
   font-size: 1.2em;
   line-height: 1.6;
-  background: #fa6900;
+  background: #E73323;
   overflow-x: hidden;
 }
 
@@ -106,7 +113,7 @@ label a {
   
 }
 
-# h1 {
+/* h1 {
 #   position: absolute;
 #   top: 50%;
 #   left: 50%;
@@ -115,4 +122,17 @@ label a {
 #   width: 80%;
 #   text-align: center;
 # }
+*/
 
+section.dc-odd {
+    background-color: #F4BCBD;
+}
+
+section.dc-even {
+    background-color: #C5291C;
+}
+
+.dc {
+    margin-left: 30px;
+    padding-left: 20px;
+}

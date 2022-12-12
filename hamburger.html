@@ -3,19 +3,14 @@
   <title>Official Spicy UNO Game</title>
   <script type="module">import {micromark} from 'https://esm.sh/micromark@3?bundle';
       
-      function closeHamburger() {
-          var control = document.querySelector('#hamburger');
-          control.checked=false;
-      }
-
       function loadContent(uri) {
         var elements = document.getElementsByClassName('dynamic-content');
         for(var i = 0; i < elements.length; i++) {
            var eid = elements[i].id
-           if eid.endsWith(".md") {
-              fetchContent(eid, uri + eid, true);
-           else if eid.endsWith(".html") {
-              fetchContent(eid, uri + eid, false);
+           if (eid.endsWith(".md")) {
+               fetchContent(eid, uri + eid, true);
+           } else if (eid.endsWith(".html")) {
+               fetchContent(eid, uri + eid, false);
            }
         }
       }
@@ -30,7 +25,7 @@
                if (type.indexOf("text") !== 1) {
                   var content =  request.responseText;
                   var element = document.getElementById(eid);
-                  var rendered = content
+                  var rendered = content;
                   if (render) {
                      rendered = micromark(content);
                   }
@@ -42,6 +37,13 @@
       }
 
       loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");</script>
+  
+  <script type="text/javascript">
+      function closeHamburger() {
+          var control = document.querySelector('#hamburger');
+          control.checked=false;
+      }
+  </script>
   <link rel="stylesheet" href="main.css">
  </head>
 <body id="main" class="d-flex flex-column h-100">
@@ -58,15 +60,19 @@
 
     <!-- Main -->
     <main>
-     <div id="README.md" class="dynamic-content"></div>
+     <div id="top.html" class="dynamic-content"></div>
     </main>
 
     <!-- Sections -->
-    <section id="rules">
+    <section id="readme" class="dc dc-odd">
+     <div id="README.md" class="dynamic-content"></div>
+    </section>
+    
+    <section id="rules" class="dc dc-even">
      <div id="Rules.md" class="dynamic-content"></div>
     </section>
  
-    <section id="contact">
+    <section id="contact" class="dc dc-odd">
      <div id="Contact.md" class="dynamic-content"></div>
     </section>
 
