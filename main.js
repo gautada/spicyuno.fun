@@ -33,7 +33,8 @@ import {micromark} from 'https://esm.sh/micromark@3?bundle';
         
     }
     
-    loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");
+    loadContent("./");
+    //loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");
     // loadContent("http://www.spicyuno.fun/");
     
     function closeHamburger() {
