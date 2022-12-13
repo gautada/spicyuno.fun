@@ -1,48 +1,57 @@
 <html>
  <head>
   <title>Official Spicy UNO Game</title>
-  <script type="module">import {micromark} from 'https://esm.sh/micromark@3?bundle';
-      
-      function loadContent(uri) {
-        var elements = document.getElementsByClassName('dynamic-content');
-        for(var i = 0; i < elements.length; i++) {
-           var eid = elements[i].id
-           if (eid.endsWith(".md")) {
-               fetchContent(eid, uri + eid, true);
-           } else if (eid.endsWith(".html")) {
-               fetchContent(eid, uri + eid, false);
-           }
-        }
-      }
+  <script type="module">
+import {micromark} from 'https://esm.sh/micromark@3?bundle';
           
-      function fetchContent(eid, uri, render) {
-         var request = new XMLHttpRequest();
-         request.open('GET', uri, true);
-         request.send(null);
-         request.onreadystatechange = function () {
-            if (request.readyState === 4 && request.status === 200) {
-               var type = request.getResponseHeader('Content-Type');
-               if (type.indexOf("text") !== 1) {
-                  var content =  request.responseText;
-                  var element = document.getElementById(eid);
-                  var rendered = content;
-                  if (render) {
-                     rendered = micromark(content);
-                  }
-                  element.innerHTML = rendered;
-               }
-            }
-         }
-         
+function loadContent(uri) {
+  var elements = document.getElementsByClassName('dynamic-content');
+  for(var i = 0; i < elements.length; i++) {
+      var eid = elements[i].id
+      if (eid.endsWith(".md")) {
+          fetchContent(eid, uri + eid, true);
+      } else if (eid.endsWith(".html")) {
+          fetchContent(eid, uri + eid, false);
       }
+  }
+}
 
-      loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");</script>
-  
-  <script type="text/javascript">
-      function closeHamburger() {
-          var control = document.querySelector('#hamburger');
-          control.checked=false;
+function fetchContent(eid, uri, render) {
+  var request = new XMLHttpRequest();
+  request.open('GET', uri, true);
+  request.send(null);
+  request.onreadystatechange = function () {
+      if (request.readyState === 4 && request.status === 200) {
+          var type = request.getResponseHeader('Content-Type');
+          if (type.indexOf("text") !== 1) {
+              var content =  request.responseText;
+              var element = document.getElementById(eid);
+              var rendered = content;
+              if (render) {
+                  rendered = micromark(content);
+              }
+              element.innerHTML = rendered;
+          }
       }
+  }
+  
+}
+
+function closeHamburger() {
+  var control = document.querySelector('#hamburger');
+  control.checked=false;
+}
+
+window.onload = function(){
+  var elements = document.querySelectorAll('.hamburger-close');
+  elements.forEach(function(value){
+    value.onclick = function() { closeHamburger(); };
+  });
+};
+
+loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");
+// loadContent("http://www.spicyuno.fun/");
+
   </script>
   <link rel="stylesheet" href="main.css">
  </head>
@@ -51,8 +60,8 @@
   <input id="hamburger" type="checkbox">
    <span class="menu"> <span class="hamburger"></span> </span>
    <ul>
-    <li> <a href="#rules" onclick="closeHamburger();">Rules</a> </li>
-    <li> <a href="#contact" onclick="closeHamburger();">Contact</a> </li>
+    <li> <a href="#rules" class="hamburger-close">Rules</a> </li>
+    <li> <a href="#contact" class="hamburger-close">Contact</a> </li>
    </ul>
   </label>
 
