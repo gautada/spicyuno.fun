@@ -130,17 +130,17 @@ label a {
 # }
 */
 
-div.dc-1 {
+div.dc-1, div.dc-1 a {
     background-color: var(--color_bg_light);
     color: var(--color_fg_light);
 }
 
-div.dc-2 {
+div.dc-2, div.dc-2 a {
     background-color: var(--color_bg_dark);
+    color: var(--color_fg_dark);
 }
 
 div.dc {
-    margin-left: 30px;
     padding-left: 20px;
     border-radius: 25px;
 }

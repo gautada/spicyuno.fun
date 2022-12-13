@@ -14,6 +14,7 @@ function loadContent(uri) {
 
 function fetchContent(eid, uri, render) {
   var request = new XMLHttpRequest();
+  console.log(uri);
   request.open('GET', uri, true);
   request.send(null);
   request.onreadystatechange = function () {
@@ -21,6 +22,7 @@ function fetchContent(eid, uri, render) {
           var type = request.getResponseHeader('Content-Type');
           if (type.indexOf("text") !== 1) {
               var content =  request.responseText;
+              console.log(content);
               var element = document.getElementById(eid);
               var rendered = content;
               if (render) {
@@ -45,7 +47,6 @@ window.onload = function(){
   });
 };
 
-loadContent("./");
-// loadContent("https://raw.githubusercontent.com/gautada/spicyuno.fun/main/");
-// loadContent("http://www.spicyuno.fun/");
+// loadContent("./");
+loadContent("http://localhost:8080/");
 
