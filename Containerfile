@@ -62,6 +62,7 @@ COPY *.js /home/$USER/www/
 COPY *.css /home/$USER/www/
 COPY *.md /home/$USER/www/
 COPY *.png /home/$USER/www/
+COPY *.pdf /home/$USER/www/
 RUN ln -sf /dev/stdout /var/log/nginx/access.log && ln -sf /dev/stderr /var/log/nginx/error.log
 # RUN echo "sudo /usr/sbin/nginx -g 'daemon off;'" > /home/nginx/go \
 #  && chmod +x /home/nginx/go
