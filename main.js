@@ -47,6 +47,6 @@ window.onload = function(){
   });
 };
 
-// loadContent("./");
-loadContent("http://localhost:8080/");
+loadContent("./");
+// loadContent("http://localhost:8080/");
 
