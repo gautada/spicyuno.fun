@@ -136,3 +136,8 @@ section.dc-even {
     margin-left: 30px;
     padding-left: 20px;
 }
+
+img.logo {
+   width: 100px;
+   height: 100px;
+}
